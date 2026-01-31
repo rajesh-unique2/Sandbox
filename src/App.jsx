@@ -9,43 +9,61 @@ import FourthSection from "./components/FourthSection";
 import FifthSection from "./components/FifthSection";
 import Footer from "./components/Footer";
 import FastTransaction from "./components/FastTransaction";
+import SecurePayments from "./components/SecurePayments";
+import VideoComponent from "./components/VideoComponent";
 
 const App = () => {
-  return (
-    <BrowserRouter>
-      <div className="box-border m-0 h-screen w-screen bg-white">
-        <Navbar />
+  
+  return ( 
+    <div>
+       
+      <BrowserRouter>
         <Routes>
-          {/* Default route shows all sections */}
-          <Route
-            path="/"
-            element={
-              <>
-                <FirstSection />
-                <SecondSection />
-                <ThirdSection />
-                <FourthSection />
-                <FifthSection />
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/Third" element={<> <FirstSection />
-                <SecondSection />
-                <ThirdSection />
-                <FourthSection />
-                <FifthSection />
-                <Footer /> </>} />
-          <Route path="/Fast" element={<> <FirstSection />
-                <SecondSection />
-                <FastTransaction/>
-                <FourthSection />
-                <FifthSection />
-                <Footer />
+          <Route path="/videopage" element={<>
+              <Navbar />
+              <FirstSection />
+              <SecondSection />
+              <ThirdSection />
+              <FourthSection />
+              <VideoComponent />
+              <FifthSection />
+              <Footer />
           </>} />
+
+          <Route path="/fast-transaction" element={<>
+              <Navbar />
+              <FirstSection />
+              <SecondSection />
+              <FastTransaction />
+              <FourthSection />
+              <FifthSection />
+              <Footer />
+          </>} />
+          <Route path="/secure-payments" element={<>
+              <Navbar />
+              <FirstSection />  
+              <SecondSection />
+              <SecurePayments />
+              <FourthSection />
+              <FifthSection />
+              <Footer />
+          </>} />
+          <Route path="/" element={
+            <> 
+              <Navbar />
+              <FirstSection />    
+              <SecondSection />
+              <ThirdSection />
+              <FourthSection />
+              <FifthSection />
+              <Footer />
+            </>
+          } />
         </Routes>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+ 
+    
+    </div>
   );
 };
 

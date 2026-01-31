@@ -11,6 +11,7 @@ import {
   faYoutube,
   faDribbble,
 } from "@fortawesome/free-brands-svg-icons";
+import FollowIcons from "./FollowIcons";
 
 const Footer = () => {
   const [list1, setlist1] = useState(false);
@@ -18,9 +19,9 @@ const Footer = () => {
   const [list3, setlist3] = useState(false);
   return (
     <div>
-      <div className="w-screen h-full p-30 bg-blue-50 flex justify-center text-slate-600 font-medium items-center gap-10 flex-col">
-        <p className="uppercase">faq</p>
-        <b className="w-250 text-[40px] text-black opacity-75 text-center font-serif">
+      <div className="w-screen h-full lg:p-30 bg-blue-50 flex lg:items-center justify-center text-slate-600 font-medium gap-5 lg:gap-10 flex-col p-5">
+        <p className="uppercase text-center">faq</p>
+        <b className="lg:w-250 lg:text-[40px] text-[25px] text-black opacity-75 text-center font-serif">
           If you don't see an answer to your question, you can send us an email
           from our contact form.
         </b>
@@ -32,15 +33,15 @@ const Footer = () => {
                 <li className='px-4 py-3 bg-white shadow-2xl mt-5 w-160 h-18 relative' onClick={()=>{setlist3(prev=>!prev)}}></li>
             </ul> */}
         <details
-          className="bg-white py-4 w-160 wrap transition-all rounded-2xl shadow-2xl"
+          className="bg-white py-4 lg:w-160 wrap w-auto transition-all rounded-2xl shadow-2xl"
           onClick={() => setlist1((prev) => !prev)}
         >
-          <summary className="w-160 list-none px-10 cursor-pointer text-[22px] text-black">
+          <summary className="lg:w-160 list-none lg:px-10 cursor-pointer text-xl lg:text-xl text-black">
             <FontAwesomeIcon icon={faAngleDown} color="blue" /> How do I get my
             subscription receipt?
           </summary>
           <p
-            className={` w-160 px-12 py-4 mt-3 text-lg font-lighter text-slate-500 tracking-wider`}
+            className={`lg:w-160 px-12 py-4 mt-3 text-lg font-lighter text-slate-500 tracking-wider`}
           >
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
             nibh, ut fermentum massa justo sit amet risus. Cras mattis
@@ -50,12 +51,12 @@ const Footer = () => {
             dui. Cras justo odio, dapibus ac facilisis.
           </p>
         </details>
-        <details className="bg-white p-4 w-160 wrap transition-all rounded-2xl shadow-2xl">
-          <summary className="w-160 list-none px-10 cursor-pointer text-[22px] text-black">
-            <FontAwesomeIcon icon={faAngleDown} color="blue" /> Are there any
-            discounts for people in need?
+        <details className="bg-white py-4 lg:w-160 wrap transition-all rounded-2xl shadow-2xl">
+          <summary className="lg:w-160 list-none lg:px-10 cursor-pointer text-xl text-black flex gap-2 items-center px-2">
+            <FontAwesomeIcon icon={faAngleDown} color="blue" /> <p>Are there any
+            discounts for people in need?</p>
           </summary>
-          <p className="w-160 px-12 mt-3 py-4 text-lg font-lighter text-slate-500 tracking-wider">
+          <p className="lg:w-160 px-12 mt-3 py-4 text-lg font-lighter text-slate-500 tracking-wider">
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
             nibh, ut fermentum massa justo sit amet risus. Cras mattis
             consectetur purus sit amet fermentum. Praesent commodo cursus magna,
@@ -64,12 +65,12 @@ const Footer = () => {
             dui. Cras justo odio, dapibus ac facilisis.
           </p>
         </details>
-        <details className="bg-white p-4 w-160 wrap transition-all rounded-2xl shadow-2xl">
-          <summary className="w-160 list-none px-10 cursor-pointer text-[22px] text-black">
+        <details className="bg-white py-4 lg:w-160 wrap transition-all rounded-2xl shadow-2xl">
+          <summary className="lg:w-160 list-none lg:px-10 cursor-pointer text-xl text-black flex gap-2 items-center px-2">
             <FontAwesomeIcon icon={faAngleDown} color="blue" /> Do you offer a
             free trial edit?
           </summary>
-          <p className="w-160 px-12 mt-3 text-lg py-4 font-lighter text-slate-500 tracking-wider">
+          <p className="lg:w-160 px-12 mt-3 text-lg py-4 font-lighter text-slate-500 tracking-wider">
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
             nibh, ut fermentum massa justo sit amet risus. Cras mattis
             consectetur purus sit amet fermentum. Praesent commodo cursus magna,
@@ -78,12 +79,12 @@ const Footer = () => {
             dui. Cras justo odio, dapibus ac facilisis.
           </p>
         </details>
-        <details className="bg-white p-4 w-160 wrap transition-all rounded-2xl shadow-2xl">
-          <summary className="w-160 list-none px-10 cursor-pointer text-[22px] text-black">
+        <details className="bg-white py-4 lg:w-160 wrap transition-all rounded-2xl shadow-2xl">
+          <summary className="lg:w-160 list-none lg:px-10 cursor-pointer text-xl text-black flex gap-2 items-center px-2">
             <FontAwesomeIcon icon={faAngleDown} color="blue" /> How do I reset
             my Account password?
           </summary>
-          <p className="w-160 px-12 mt-3 text-lg py-4 font-lighter text-slate-500 tracking-wider">
+          <p className={`lg:w-160 px-12 mt-3 text-lg py-4 font-lighter text-slate-500 tracking-wider`}>
             Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
             nibh, ut fermentum massa justo sit amet risus. Cras mattis
             consectetur purus sit amet fermentum. Praesent commodo cursus magna,
@@ -93,53 +94,20 @@ const Footer = () => {
           </p>
         </details>
       </div>
-      <div className="w-screen box-border h-100 px-10 py-20 gap-5 bg-slate-800 flex justify-between items-center">
-        <div className="h-fit w-1/6 px-8 py-4 text-lg flex flex-col flex-wrap gap-5 justify-center text-white">
-          <img src={sandbox} className="w-35 h-8" alt="" />{" "}
+
+
+      
+      <div className="w-screen box-border flex flex-col lg:h-100 lg:px-10 lg:py-20 gap-7 lg:gap-5 p-5 bg-slate-800 items-start lg:justify-between lg:items-center md:flex-wrap md:flex-row">
+        <div className="h-fit lg:w-1/6 flex-1 lg:px-8 py-4 text-lg flex flex-col flex-wrap gap-5 justify-center text-white">
+          <img src={sandbox} className="w-35 h-7" alt="" />{" "}
           <p className="text-slate-200 text-[20px]">
             &copy; 2025 Sandbox. All rights reserved.
           </p>
-         <ul className="flex justify-around items-center gap-2">
-            <li>
-              <FontAwesomeIcon
-                className="transition-all duration-300 text-2xl hover:translate-y-[-3px]"
-                color="white"
-                icon={faTwitter}
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                className="transition-all duration-300 text-2xl hover:translate-y-[-3px]"
-                color="white"
-                icon={faFacebookF}
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                className="transition-all duration-300 text-2xl hover:translate-y-[-3px]"
-                color="white"
-                icon={faDribbble}
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                className="transition-all duration-300 text-2xl hover:translate-y-[-3px]"
-                color="white"
-                icon={faInstagram}
-              />
-            </li>
-            <li>
-              <FontAwesomeIcon
-                className="transition-all duration-300 text-2xl hover:translate-y-[-3px]"
-                color="white"
-                icon={faYoutube}
-              />
-            </li>
-          </ul>
+          <FollowIcons/>
         </div>
-        <div className="h-full w-1/4  flex flex-col flex-wrap items-center text-slate-300 gap-5 text-[18px]">
+        <div className="h-full lg:w-1/4 flex-1 flex flex-col flex-wrap lg:items-center text-slate-300 gap-5 text-[18px]">
           <b className="text-2xl text-white">Get in Touch</b>
-          <p className="w-1/2">
+          <p className="lg:w-3/4">
             Moonshine St. 14/05 Light City, London, United Kingdom
           </p>
           <p>
@@ -149,9 +117,9 @@ const Footer = () => {
             00 (123) 456 78 90
           </p>
         </div>
-        <div className="h-full w-1/6  flex flex-wrap justify-center text-slate-300 text-[20px]">
+        <div className="h-full lg:w-1/6 flex-1 flex flex-wrap justify-center text-slate-300 text-[20px]">
           <ul className="list-none  flex flex-col gap-2">
-            <li className="text-white text-[22px]">
+            <li className="text-white text-xl">
               <b>Learn More</b>
             </li>
             <li>About Us</li>
@@ -161,24 +129,24 @@ const Footer = () => {
             <li>Privacy Policy</li>
           </ul>
         </div>
-        <div className="h-full w-1/3 flex flex-col flex-wrap items-center justify-items-start text-slate-300 text-[19px]">
+        <div className="h-full w-full lg:w-1/3 flex flex-col flex-wrap lg:items-center justify-items-start text-slate-300 text-[19px]">
           <div className="flex flex-col gap-5">
-            <b className="text-[20px] text-white">Give Newsletter</b>
-            <p className="w-60">
+            <b className="text-[20px] text-white">Our Newsletter</b>
+            <p className="lg:w-60">
               Subscribe to our newsletter to get our news & deals delivered to
               you.
             </p>
-            <div>
+            <div className="flex">
               <input
                 type="text"
                 id="email"
                 placeholder="Email Address"
-                className=" bg-slate-700 border-2 border-slate-800 px-5 text-[19px] h-15 w-1/2 rounded-bl-2xl rounded-tl-2xl"
+                className=" bg-slate-700 border-2 border-slate-800 px-5 text-[19px] h-15 w-[80%] lg:w-1/2 rounded-bl-2xl rounded-tl-2xl"
               />
               <input
                 type="submit"
                 value="Join"
-                className="bg-blue-500 text-white cursor-pointer font-bold text-[19px] p-4 rounded-br-2xl rounded-tr-2xl h-15"
+                className="bg-blue-500 text-white cursor-pointer font-bold text-[19px] p-4  rounded-br-2xl rounded-tr-2xl h-15"
               />
             </div>
           </div>

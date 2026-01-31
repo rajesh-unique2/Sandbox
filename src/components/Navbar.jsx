@@ -11,7 +11,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [Navbar, setNavbar] = useState(false);
-  const [Info, setInfo] = useState(false);
+  const [Info, setInfo] = useState(true);
   const pages = [
     "Services",
     "About",
@@ -111,7 +111,7 @@ const Navbar = () => {
     <FollowIcons />
   </div>
 </div>
-      <div className=" hidden lg:block bg-blue-50 px-20 py-3">
+      <div className="hidden lg:block bg-blue-50 px-20 py-3">
         <nav className="flex justify-between items-center">
           <div>
             <img src={logo} alt="" className="w-34" />
@@ -201,7 +201,7 @@ const Navbar = () => {
                         .fill(0)
                         .map((_, i) => {
                           return (
-                            <p className="pl-8 text-[18px] text-slate-100 font-semibold">
+                            <p className="pl-8 text-[18px] text-slate-100 font-semibold" key={i*3}>
                               Demo {i + 1}
                             </p>
                           );
@@ -220,7 +220,7 @@ const Navbar = () => {
                         return (
                           <details>
                             <summary
-                              key={i}
+                              key={i*2}
                               className="text-xl pl-8 pt-4 font-semibold list-none flex justify-between items-center"
                             >
                               {data}
@@ -315,7 +315,7 @@ const Navbar = () => {
                         {documents.map((d, i) => {
                           return (
                             <li
-                              key={i}
+                              key={i*0.2}
                               className={
                                 ["USAGE", "ELEMENTS", "STYLEGUIDE"].includes(d)
                                   ? "text-blue-500"
@@ -351,4 +351,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
- 

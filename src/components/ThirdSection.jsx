@@ -7,8 +7,9 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 
 const ThirdSection = () => {
+  
   return (
-    <div className="w-screen h-screen lg:p-20 p-5 md:p-10 flex flex-col lg:flex-row lg:items-center items-start justify-start gap-20 bg-gray-50 opacity-90 box-border">
+    <div className="w-screen h-screen lg:p-20 p-5 md:p-10 flex flex-col lg:flex-row lg:items-center items-start justify-start gap-10 md:gap-20 bg-gray-50 opacity-90 box-border">
       <div className="grid place-items-center grid-cols-2 gap-5"><img src={minsk} alt="" className="w-auto lg:w-70 min-w-0 shadow-2xl opacity-100 rounded-2xl" />
       <div className="h-full flex justify-center items-start gap-5 flex-col"><img src={panama} alt="" className="shadow-2xs lg:w-60 lg:h-40 opacity-100 rounded-xl"/><img src={kathmandu} alt="" className="shadow-2xs lg:w-50 lg:h-55 rounded-xl opacity-100" /></div></div>
       <div className="h-full lg:w-150 text-wrap text-black pl-2">

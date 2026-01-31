@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use } from "react";
 import { useState } from "react";
 import person1 from '../Images/Humans/person1.jpg'
 import person2 from '../Images/Humans/person2.jpg'
@@ -9,10 +9,15 @@ import person6 from '../Images/Humans/person6.jpg'
 import secure from '../Images/secure.png'
 import loan from '../Images/loan.png'
 import reload from '../Images/reload.png'
-import video from '../Images/videos/video.mp4'
+import { useNavigate } from "react-router-dom";
+import videothumbnail from '../Images/video-thumbnail.jpg'
+import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import VideoComponent from "./VideoComponent";
 
 const FourthSection = () => {
-  const [size, setsize] = useState(false)
+  const [video, setvideo] = useState(false);
+  const navigate = useNavigate();
   const [worksImage, setworksImage] = useState([
     {
       image:secure,
@@ -69,19 +74,19 @@ const FourthSection = () => {
     }
   ]);
   return (
-    <div className="w-screen  mt-30 box-border opacity-100">
-      <div className="flex items-center justify-center flex-col gap-10 bg-white">
-        <div className="text-center text-slate-400 uppercase font-mono tracking-wider font-bold">
+    <div className="lg:w-screen py-15  lg:mt-30 box-border opacity-100 font-sans md:py-30 lg:px-5 lg:p-0">
+      <div className="flex items-center justify-center flex-col lg:gap-10 gap-3 bg-white wrap-break-word">
+        <div className="text-center text-slate-400 uppercase tracking-wider font-bold ">
           Happy Customers
         </div>
-        <div className="text-center text-slate-800 text-4xl w-180 font-serif font-bold">
+        <div className="text-center text-slate-800 lg:text-4xl lg:w-180 font-serif font-bold text-[26px] flex-wrap text-wrap md:px-10 md:text-3xl">
           Don't take our word for it. See what customers are saying about us.
         </div>
-      </div>
-      <div className="w-full mt-20 bg-blue-50 grid place-items-center grid-cols-3 p-5 gap-2 pb-30">
+      </div> 
+       <div className="w-full lg:mt-20 md:py-10 bg-blue-50 grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3 gap-2 lg:pb-30 h-fit">
         {comments.map((data,id)=>{
         return (
-            <div key={id} className="grid gap-8 w-90 p-10 rounded-2xl bg-white">
+            <div key={id} className="grid gap-8 md:m-3 m-5 w-fit lg:w-90 p-10 rounded-2xl bg-white">
                 <div>⭐⭐⭐⭐⭐</div>
                 <div className="text-slate-500 font-sans text-lg opacity-100">{data.content}</div>
                 <div className="flex justify-items-stretch items-stretch gap-8">
@@ -95,18 +100,19 @@ const FourthSection = () => {
         })
     }
       </div>
-      <div className="flex p-5 justify-center  items-center gap-15 w-screen h-screen mt-20">
-        <div className="h-100 w-120 bg-blue-100 relative rounded-lg">
-         <video src={video} className="w-full h-110 absolute translate-x-[-40px] translate-y-[-100px] rounded-3xl"></video>
+      <div className="flex lg:flex-row flex-col p-5 lg:justify-center lg:items-center lg:gap-15 w-screen h-screen lg:mt-20">
+        <div className="h-150 md:w-130 lg:h-100 lg:w-120 bg-blue-100 rounded-lg relative" onClick={()=>{ navigate('/videopage')}}> 
+         <img src={videothumbnail} alt="" className="absolute lg:bottom-10 lg:right-10 lg:w-[75rem] h-auto rounded-2xl md:w-full md:h-full"/>
+         <FontAwesomeIcon icon={faCirclePlay} className="text-blue-500  absolute top-1/2 left-1/2 md:-translate-x-2/2 md:-translate-y-3/2 -translate-x-1/2 -translate-y-1/2 object-cover rounded-full text-7xl opacity-90 hover:opacity-100 cursor-pointer"/>
         </div>
-        <div className="flex justify-items-stretch items-start flex-col h-full gap-3 w-105">
-          <p className="font-sans font-medium text-slate-400  text-lg uppercase">How It Works?</p>
-          <p className="text-4xl w-70  font-serif font-bold text-black">Here are the 3 working steps on success.</p>
-          <ul className="list-none flex justify-center items-center gap-4 flex-col">
+        <div className="flex justify-items-stretch items-start flex-col gap-3 lg:w-105 mt-10">
+          <p className="font-sans font-medium text-slate-400 text-lg uppercase">How It Works?</p>
+          <p className="text-[28px] lg:text-4xl lg:w-70 font-serif font-bold text-black">Here are the 3 working steps on success.</p>
+          <ul className="list-none flex justify-center items-center gap-4 flex-col flex-wrap">
             {worksImage.map((data,id)=>{
               
               return (<li className="flex justify-center gap-4 items-center" key={id}>
-                <img src={data.image} alt="" className="w-20 h-18 opacity-100" />
+                <img src={data.image} alt="" className="w-15 h-15 md:w-20 md:h-18 opacity-100" />
                 <div>
                   <p className="font-medium text-black text-lg">{data.heading}</p>
                   <p className="text-slate-500 font-sans">{data.content}</p>

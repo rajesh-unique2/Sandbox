@@ -1,12 +1,18 @@
 import React from "react";
 import "../App.css";
 import { TypeAnimation } from "react-type-animation";
+import typesomething from '../Images/typesomething.jpg'
+import text from '../Images/text.jpg'
+import anniechrist from '../Images/anniechrist.jpg'
+import callieowen from '../Images/callieowen.jpg'
+import chrisnewton from '../Images/chrisnewton.jpg'
+import craftworkbank from '../Images/craftworkbank.jpg'
 
 const FirstSection = () => {
   return (
     <div>
       <div className="min-w-sm overflow-x-hidden lg:pb-44 lg:flex-row flex flex-col-reverse lg:w-screen h-fit bg-blue-50 justify-center items-center box-content pb-16 font-[sans-serif] gap-8 ">
-        <div className="flex lg:p-18 flex-1 lg:items-start justify-center w-screen items-center flex-col px-1 text-4xl font-serif text-center gap-4 lg:text-left md:text-5xl md:max-w-[65%]">
+        <div className="flex lg:p-16 flex-4/10 lg:items-start justify-center w-screen items-center flex-col px-1 text-4xl font-serif text-center gap-4 lg:text-left md:text-5xl md:max-w-[70%]">
           <div className="font-semibold leading-12">
             Sandbox is effortless and powerful with
           </div>
@@ -41,18 +47,18 @@ const FirstSection = () => {
 
         {/*right content forimages*/}
 
-        <div className="lg:m-0 h-100 p-14 lg:p-0 lg:w-200 lg:h-140 flex justify-items-stretch items-stretch mx-[3%] lg:gap-4 flex-2 sm:flex-wrap">
+        <div className="lg:m-0 h-100 p-14 flex-5/10 lg:p-0 lg:h-140 flex justify-items-stretch items-stretch mx-[3%] lg:gap-4  sm:flex-wrap">
           <div className="lg:items-end lg:justify-end flex flex-col flex-2 items-start gap-6 justify-center lg:pb-15">
             <img
               src={
-                "https://sandbox.elemisthemes.com/assets/img/photos/sa20@2x.jpg"
+                typesomething
               }
               alt=""
               className="w-[75%] rounded-lg lg:w-[68%]"
             />
             <img
               src={
-                "https://sandbox.elemisthemes.com/assets/img/photos/sa18@2x.jpg"
+                text
               }
               alt=""
               className="w-[75%] rounded-lg lg:w-[80%]"
@@ -61,7 +67,7 @@ const FirstSection = () => {
           <div className=" flex flex-col flex-2 justify-center lg:flex-3 lg:justify-end items-center">
             <img
               src={
-                "https://sandbox.elemisthemes.com/assets/img/photos/sa16@2x.jpg"
+                anniechrist
               }
               alt=""
               className="lg:w-[90%] rounded-xl"
@@ -70,21 +76,21 @@ const FirstSection = () => {
           <div className="lg:items-start lg:justify-end lg:pb-15 flex flex-col flex-2 justify-center gap-6 items-end">
             <img
               src={
-                "https://sandbox.elemisthemes.com/assets/img/photos/sa21@2x.jpg"
+                chrisnewton
               }
               alt=""
               className="lg:w-[75%] w-[70%] rounded-lg"
             />
             <img
               src={
-                "https://sandbox.elemisthemes.com/assets/img/photos/sa19@2x.jpg"
+                callieowen
               }
               alt=""
               className="lg:w-[75%] w-[70%] rounded-lg"
             />
             <img
               src={
-                "https://sandbox.elemisthemes.com/assets/img/photos/sa17@2x.jpg"
+                craftworkbank
               }
               alt=""
               className="lg:w-[75%] w-[70%] rounded-lg"
