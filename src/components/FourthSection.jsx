@@ -87,7 +87,7 @@ const FourthSection = () => {
         {comments.map((data,id)=>{
         return (
             <div key={id} className="grid gap-8 md:m-3 m-5 w-fit lg:w-90 p-10 rounded-2xl bg-white">
-                <div>⭐⭐⭐⭐⭐</div>
+                <div></div>
                 <div className="text-slate-500 font-sans text-lg opacity-100">{data.content}</div>
                 <div className="flex justify-items-stretch items-stretch gap-8">
                     <div><img src={data.image} alt="" className="w-20 h-20 rounded-[50px] object-cover"/></div>
